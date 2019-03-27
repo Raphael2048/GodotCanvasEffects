@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Shaders/Vignette.shader" type="Shader" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Shaders/Grayscale.shader" type="Shader" id=3]
+[ext_resource path="res://Shaders/Pixel.shader" type="Shader" id=4]
+[ext_resource path="res://Shaders/Sepia.shader" type="Shader" id=5]
+[ext_resource path="res://Shaders/Nega.shader" type="Shader" id=6]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/effect_color = Color( 0, 0, 0, 0.258824 )
+shader_param/effect_factor = 0.573
+shader_param/radius = 0.714
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 3 )
+shader_param/effect_factor = 1.0
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 4 )
+shader_param/effect_factor = 0.3
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 5 )
+shader_param/effect_color = Color( 0.505882, 0.0941176, 0.6, 1 )
+shader_param/effect_factor = 1.0
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 6 )
+shader_param/effect_factor = 1.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Vignette" type="Sprite" parent="."]
+light_mask = 0
+material = SubResource( 1 )
+position = Vector2( 147.191, 171.046 )
+texture = ExtResource( 2 )
+
+[node name="Grayscale" type="Sprite" parent="."]
+light_mask = 0
+material = SubResource( 2 )
+position = Vector2( 288.035, 174.978 )
+texture = ExtResource( 2 )
+
+[node name="Pixel" type="Sprite" parent="."]
+light_mask = 0
+material = SubResource( 3 )
+position = Vector2( 419.621, 177.003 )
+texture = ExtResource( 2 )
+
+[node name="Spedia" type="Sprite" parent="."]
+light_mask = 0
+material = SubResource( 4 )
+position = Vector2( 557.984, 182.246 )
+texture = ExtResource( 2 )
+
+[node name="Nega" type="Sprite" parent="."]
+light_mask = 0
+material = SubResource( 5 )
+position = Vector2( 701.451, 186.15 )
+texture = ExtResource( 2 )
+
