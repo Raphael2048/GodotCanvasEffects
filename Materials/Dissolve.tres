@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://Shaders/Dissolve.shader" type="Shader" id=1]
+[ext_resource path="res://Materials/UIDissolveNoise.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/effect_factor = 0.443
+shader_param/color = Color( 1, 0, 0, 1 )
+shader_param/width = 0.083
+shader_param/noise_texture = ExtResource( 2 )
+
