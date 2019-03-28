@@ -48,9 +48,12 @@ shader_param/effect_factor = 1.0
 
 [sub_resource type="ShaderMaterial" id=9]
 shader = ExtResource( 10 )
-shader_param/effect_color = Color( 0, 0, 0, 1 )
-shader_param/effect_factor = 1.0
-shader_param/radius = 1.0
+shader_param/effect_color = Color( 1, 1, 1, 1 )
+shader_param/effect_strength = 0.5
+shader_param/effect_offset = 0.463
+shader_param/rotation = 0.0
+shader_param/width = 0.2
+shader_param/softness = 0.5
 
 [node name="Node2D" type="Node2D"]
 
