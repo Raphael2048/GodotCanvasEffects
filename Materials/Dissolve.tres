@@ -5,8 +5,8 @@
 
 [resource]
 shader = ExtResource( 1 )
-shader_param/effect_factor = 0.443
-shader_param/color = Color( 1, 0, 0, 1 )
-shader_param/width = 0.083
+shader_param/effect_factor = 0.543
+shader_param/color = Color( 1, 0.0313726, 0, 0.411765 )
+shader_param/width = 0.198
 shader_param/noise_texture = ExtResource( 2 )
 

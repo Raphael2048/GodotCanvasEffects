@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wallhaven-753629.jpg-90af15a3d175ce5821da47205d2f2a79.stex"
+path="res://.import/godot_logo.svg-914287893e1db2c5a5e3d2d5a882eebc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shaders/wallhaven-753629.jpg"
-dest_files=[ "res://.import/wallhaven-753629.jpg-90af15a3d175ce5821da47205d2f2a79.stex" ]
+source_file="res://godot_logo.svg"
+dest_files=[ "res://.import/godot_logo.svg-914287893e1db2c5a5e3d2d5a882eebc.stex" ]
 
 [params]
 

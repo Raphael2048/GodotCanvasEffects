@@ -1,21 +1,22 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Shaders/Vignette.shader" type="Shader" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://godot_logo.svg" type="Texture" id=2]
 [ext_resource path="res://Shaders/Grayscale.shader" type="Shader" id=3]
 [ext_resource path="res://Shaders/Pixel.shader" type="Shader" id=4]
 [ext_resource path="res://Shaders/Sepia.shader" type="Shader" id=5]
 [ext_resource path="res://Shaders/Nega.shader" type="Shader" id=6]
-[ext_resource path="res://Shaders/Blur.shader" type="Shader" id=7]
-[ext_resource path="res://Shaders/Gradient.shader" type="Shader" id=8]
-[ext_resource path="res://Materials/Dissolve.tres" type="Material" id=9]
-[ext_resource path="res://Shaders/Shiny.shader" type="Shader" id=10]
+[ext_resource path="res://Shaders/Gradient.shader" type="Shader" id=7]
+[ext_resource path="res://Materials/Dissolve.tres" type="Material" id=8]
+[ext_resource path="res://Shaders/Shiny.shader" type="Shader" id=9]
+[ext_resource path="res://Shaders/Blur.shader" type="Shader" id=10]
+[ext_resource path="res://Shaders/Outline.shader" type="Shader" id=11]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
-shader_param/effect_color = Color( 0, 0, 0, 1 )
-shader_param/effect_factor = 0.983
-shader_param/radius = 1.0
+shader_param/effect_color = Color( 0, 0.313726, 0, 1 )
+shader_param/radius = 0.324
+shader_param/width = 0.157
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 3 )
@@ -36,24 +37,29 @@ shader_param/effect_factor = 1.0
 
 [sub_resource type="ShaderMaterial" id=6]
 shader = ExtResource( 7 )
-shader_param/strength = 3
-
-[sub_resource type="ShaderMaterial" id=7]
-shader = ExtResource( 8 )
 shader_param/color_ul = Color( 1, 0, 0, 1 )
 shader_param/color_ur = Color( 0, 1, 0, 1 )
 shader_param/color_bl = Color( 0, 0, 1, 1 )
 shader_param/color_br = Color( 1, 0, 0, 0 )
 shader_param/effect_factor = 1.0
 
-[sub_resource type="ShaderMaterial" id=9]
-shader = ExtResource( 10 )
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 9 )
 shader_param/effect_color = Color( 1, 1, 1, 1 )
-shader_param/effect_strength = 0.5
-shader_param/effect_offset = 0.463
-shader_param/rotation = 0.0
-shader_param/width = 0.2
-shader_param/softness = 0.5
+shader_param/effect_strength = 0.453
+shader_param/effect_offset = -0.015
+shader_param/rotation = 9.854
+shader_param/width = 0.211
+shader_param/softness = 0.733
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 10 )
+shader_param/strength = 3
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 11 )
+shader_param/effect_color = Color( 0, 1, 0, 1 )
+shader_param/border = 5
 
 [node name="Node2D" type="Node2D"]
 
@@ -66,49 +72,55 @@ texture = ExtResource( 2 )
 [node name="Grayscale" type="Sprite" parent="."]
 light_mask = 0
 material = SubResource( 2 )
-position = Vector2( 288.035, 174.978 )
+position = Vector2( 299.819, 174.136 )
 texture = ExtResource( 2 )
 
 [node name="Pixel" type="Sprite" parent="."]
 light_mask = 0
 material = SubResource( 3 )
-position = Vector2( 419.621, 177.003 )
+position = Vector2( 447.398, 177.845 )
 texture = ExtResource( 2 )
 
 [node name="Spedia" type="Sprite" parent="."]
 light_mask = 0
 material = SubResource( 4 )
-position = Vector2( 557.984, 182.246 )
+position = Vector2( 608.487, 173.829 )
 texture = ExtResource( 2 )
 
 [node name="Nega" type="Sprite" parent="."]
 light_mask = 0
 material = SubResource( 5 )
-position = Vector2( 701.451, 186.15 )
+position = Vector2( 770.396, 163.412 )
 rotation = -0.000811055
-texture = ExtResource( 2 )
-
-[node name="Blur" type="Sprite" parent="."]
-light_mask = 0
-material = SubResource( 6 )
-position = Vector2( 845.451, 190.15 )
 texture = ExtResource( 2 )
 
 [node name="Gradient" type="Sprite" parent="."]
 light_mask = 0
-material = SubResource( 7 )
+material = SubResource( 6 )
 position = Vector2( 147.474, 344.969 )
 texture = ExtResource( 2 )
 
 [node name="Dissolve" type="Sprite" parent="."]
 light_mask = 0
-material = ExtResource( 9 )
-position = Vector2( 302.169, 348.192 )
+material = ExtResource( 8 )
+position = Vector2( 307.698, 333.974 )
 texture = ExtResource( 2 )
 
 [node name="Shiny" type="Sprite" parent="."]
 light_mask = 0
+material = SubResource( 7 )
+position = Vector2( 459.478, 331.043 )
+texture = ExtResource( 2 )
+
+[node name="Blur" type="Sprite" parent="."]
+light_mask = 0
+material = SubResource( 8 )
+position = Vector2( 619.249, 331.275 )
+texture = ExtResource( 2 )
+
+[node name="Outline" type="Sprite" parent="."]
+light_mask = 0
 material = SubResource( 9 )
-position = Vector2( 450, 350 )
+position = Vector2( 774.021, 332.598 )
 texture = ExtResource( 2 )
 
