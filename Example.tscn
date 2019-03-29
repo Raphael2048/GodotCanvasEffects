@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Shaders/Vignette.shader" type="Shader" id=1]
 [ext_resource path="res://godot_logo.svg" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Shaders/Shiny.shader" type="Shader" id=9]
 [ext_resource path="res://Shaders/Blur.shader" type="Shader" id=10]
 [ext_resource path="res://Shaders/Outline.shader" type="Shader" id=11]
+[ext_resource path="res://Shaders/Shadow.shader" type="Shader" id=12]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
@@ -60,6 +61,12 @@ shader_param/strength = 3
 shader = ExtResource( 11 )
 shader_param/effect_color = Color( 0, 1, 0, 1 )
 shader_param/border = 5
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 12 )
+shader_param/effect_color = Color( 0.784314, 0.101961, 0.101961, 1 )
+shader_param/x_offset = 3
+shader_param/y_offset = 3
 
 [node name="Node2D" type="Node2D"]
 
@@ -122,5 +129,11 @@ texture = ExtResource( 2 )
 light_mask = 0
 material = SubResource( 9 )
 position = Vector2( 774.021, 332.598 )
+texture = ExtResource( 2 )
+
+[node name="Shadow" type="Sprite" parent="."]
+light_mask = 0
+material = SubResource( 10 )
+position = Vector2( 150, 470 )
 texture = ExtResource( 2 )
 
