@@ -2,8 +2,8 @@ shader_type canvas_item;
 render_mode blend_mix,unshaded;
 
 uniform vec4 effect_color : hint_color = vec4(1.0, 1.0, 1.0, 1.0);
-uniform int x_offset : hint_range(-5, 5) = 2;
-uniform int y_offset : hint_range(-5, 5) = 2;
+uniform int x_offset : hint_range(-20, 20) = 5;
+uniform int y_offset : hint_range(-20, 20) = 5;
 
 void fragment() {
 	vec4 c = texture(TEXTURE, UV);

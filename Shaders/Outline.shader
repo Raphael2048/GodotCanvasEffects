@@ -2,7 +2,8 @@ shader_type canvas_item;
 render_mode blend_mix,unshaded;
 
 uniform vec4 effect_color : hint_color = vec4(1.0, 1.0, 1.0, 1.0);
-uniform int border : hint_range(1, 10);
+uniform int border : hint_range(1, 30);
+uniform float border_filter : hint_range(0.01, 0.9);
 
 vec2 get_direction(int k) {
 	if(k == 1) return vec2(1.0, 0);
@@ -13,7 +14,7 @@ vec2 get_direction(int k) {
 
 void fragment() {
 	vec4 c = texture(TEXTURE, UV);
-	if(c.a > 0.01) {
+	if(c.a > border_filter) {
 		COLOR = c;
 	} else {
 		int min_length = border + 1;
