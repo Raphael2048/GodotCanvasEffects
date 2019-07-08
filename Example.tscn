@@ -148,4 +148,3 @@ material = SubResource( 10 )
 position = Vector2( 639.742, 620.814 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
-

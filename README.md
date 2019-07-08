@@ -13,7 +13,7 @@
 | Spedia     |  ![Image](https://github.com/raphael10241024/PicturesToUse/blob/master/Spedia.png?raw=true) |  effect_color, effect_factor||
 | Nega      | ![Image](https://github.com/raphael10241024/PicturesToUse/blob/master/Nega.png?raw=true)| effect_factor||
 |Gradient| ![Image](https://github.com/raphael10241024/PicturesToUse/blob/master/Gradient.png?raw=true)|color_ul, color_ur, color_bl, color_br, effect_factor||
-|Dissolve|![Image](https://github.com/raphael10241024/PicturesToUse/blob/master/Dissolve.png?raw=true) | color, width, noise_texture| need a noise texture, there are one in the demo|
+|Dissolve|![Image](https://github.com/raphael10241024/PicturesToUse/blob/master/Dissolve.png?raw=true) | color, width, noise_texture| need a noise texture, use a NoiseTexture in this demo|
 |Shiny|![Image](https://github.com/raphael10241024/PicturesToUse/blob/master/Shiny.png?raw=true) | effect_color, effect_strength, effect_offset, rotation, width, softness|change shader param effect_offset with time to make animation effect|
 |Blur|![Image](https://github.com/raphael10241024/PicturesToUse/blob/master/Blur.png?raw=true)| strength| may cost a lot of time on mobile ||
 |Outline|![Image](https://github.com/raphael10241024/PicturesToUse/blob/master/Outline.png?raw=true)|effect_color, border||
